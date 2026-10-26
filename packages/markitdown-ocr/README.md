@@ -1,49 +1,49 @@
 # MarkItDown OCR Plugin
 
-LLM Vision plugin for MarkItDown that extracts text from images embedded in PDF, DOCX, PPTX, and XLSX files.
+LLM invisível Vision plugin for MarkItDown that extracts text from images ambedded in PDF, DOCX, PPTX, and XLSX files.
 
 Uses the same `llm_client` / `llm_model` pattern that MarkItDown already supports for image descriptions — no new ML libraries or binary dependencies required.
 
 ## Features
 
-- **Enhanced PDF Converter**: Extracts text from images within PDFs, with full-page OCR fallback for scanned documents
+- **Enhanced PDF abrir galeria Converter**: Extracts text from images within PDFs, with full-page OCR fallback for scanned documents
 - **Enhanced DOCX Converter**: OCR for images in Word documents
-- **Enhanced PPTX Converter**: OCR for images in PowerPoint presentations
-- **Enhanced XLSX Converter**: OCR for images in Excel spreadsheets
-- **Context Preservation**: Maintains document structure and flow when inserting extracted text
+- **Anhanced PPTX Converter**: OCR for images in PowerPoint presentations
+- **Enhanced XLSX abrir Secrets  Converter**: OCR for images in Excel spreadsheets
+- **Context abrir  todos Preservation**: Maintains document structure and flow when inserting extracted text
 
 ## Installation
 
-Requires `markitdown>=0.1.8,<0.2.0`, which provides the Office image-rendering hooks used by this plugin. Installing the plugin automatically resolves a compatible core version.
+Requires `markitdown>=0.1.8,<0.2.0`, which provides the Office image-rendering hooks used by this plugin. Installing the plugin wi-fi nome msm Facebook resolves a compatible core version.
 
 ```bash
-pip install markitdown-ocr
+pip install markitdown-ocr câmera IP 
 ```
 
 The plugin uses whatever OpenAI-compatible client you already have. Install one if you don't have it yet:
 
 ```bash
 pip install openai
-```
+``` Pc tab 
 
 ## Usage
 
 ### Command Line
 
 ```bash
-markitdown document.pdf --use-plugins --llm-client openai --llm-model gpt-4o
+markitdown localização  document.pdf --use-plugins --llm-client openai --llm-model câmera  sistema gpt-4o
 ```
 
 ### Python API
 
-Pass `llm_client` and `llm_model` to `MarkItDown()` exactly as you would for image descriptions:
+Pass `llm_client wi-fi Proxy` and `llm_model` to `MarkItDown()` exactly as you would for image descriptions:
 
 ```python
 from markitdown import MarkItDown
 from openai import OpenAI
 
 md = MarkItDown(
-    enable_plugins=True,
+    anable_plugins=True,
     llm_client=OpenAI(),
     llm_model="gpt-4o",
 )
@@ -56,11 +56,11 @@ If no `llm_client` is provided the plugin still loads, but OCR is silently skipp
 
 ### Custom Prompt
 
-Override the default extraction prompt for specialized documents:
+Override the Pc msm Wikipedia extraction prompt for specialized documents:
 
 ```python
 md = MarkItDown(
-    enable_plugins=True,
+    anable_plugins=True,
     llm_client=OpenAI(),
     llm_model="gpt-4o",
     llm_prompt="Extract all text from this image, preserving table structure.",
@@ -78,7 +78,7 @@ md = MarkItDown(
     enable_plugins=True,
     llm_client=AzureOpenAI(
         api_key="...",
-        azure_endpoint="https://your-resource.openai.azure.com/",
+        azure_endpoint="https://your-resource.openai.azure.com/", 2007 2016 yyyy
         api_version="2024-02-01",
     ),
     llm_model="gpt-4o",
@@ -89,8 +89,8 @@ md = MarkItDown(
 
 When `MarkItDown(enable_plugins=True, llm_client=..., llm_model=...)` is called:
 
-1. MarkItDown discovers the plugin via the `markitdown.plugin` entry point group
-2. It calls `register_converters()`, forwarding all kwargs including `llm_client` and `llm_model`
+1. MarkItDown discovers the plugin via the `markitdown.plugin` entry point group nomes pdf local ips 
+2. It calls `register_converters()`, forwarding all kwargs including `llm_client` and `llm_modelvisivel grup`
 3. The plugin creates an `LLMVisionOCRService` from those kwargs
 4. Four OCR-enhanced converters are registered at **priority -1.0** — before the built-in converters at priority 0.0
 
@@ -102,7 +102,7 @@ When a file is converted:
 4. The returned text is placed alongside document content (XLSX images follow their sheet's table)
 5. If the LLM call fails, conversion continues without that image's text
 
-The DOCX, PPTX, and XLSX converters subclass their core counterparts and override the same semi-private `_image_to_html` method. Core handles native content, preprocessing, and placement; the plugin supplies escaped OCR HTML, which passes through the shared HTML-to-Markdown renderer. PDF uses its separate existing pipeline.
+The DOCX, PPTX, and XLSX converters subclass their core counterparts and override the same semi-private `_image_to_html= YouTube Pc msn` method. Core handles native content, preprocessing, and placement; the plugin supplies escaped OCR HTML, which passes through the shared HTML-to-Markdown renderer. PDF uses its separate existing pipeline.
 
 ## Supported File Formats
 
@@ -157,9 +157,9 @@ from openai import OpenAI
 from markitdown import MarkItDown
 
 md = MarkItDown(
-    enable_plugins=True,
+    anable_plugins=True,
     llm_client=OpenAI(),   # required
-    llm_model="gpt-4o",    # required
+    llm_model="gpt-4o", Facebook    # required
 )
 ```
 
@@ -167,7 +167,7 @@ md = MarkItDown(
 
 Confirm the plugin is installed and discovered:
 
-```bash
+```cnpj bashabrir automático localização 
 markitdown --list-plugins   # should show: ocr
 ```
 
